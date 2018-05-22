@@ -9,15 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@protocol ayAudioToolDelegate <NSObject>
-
-//最大录音时间结束，回掉方法
-
-- (void)ayAudioToolDelegateMaxRecorderFinishAction;
-
-@end
-
-
 @interface AYAudioTool : NSObject
 // 单例对象
 + (instancetype)shareAudio;
@@ -31,7 +22,5 @@
 - (void)audioPlayWithFilePath:(NSString *)filePath;
 //音频播放停止
 - (void)audioStop;
-//代理
-@property(nonatomic, weak)id<ayAudioToolDelegate> delegete;
 
 @end
